@@ -1,12 +1,27 @@
+
+
+
 const counterDisplay = document.querySelector("h3");
 let counter = 0;
+
+const buzz = () => {
+    const audio = new Audio();
+    audio.src = "./buzz.mp3";
+    audio.play();
+  };
+const ring = () => {
+    const audio = new Audio();
+    audio.src = "./Enter.mp3";
+    audio.play();
+  };
+  
+
 
 const squareMaker = () => {
   const square = document.createElement("span2");
   square.classList.add("square");
   document.body.appendChild(square);
-  console.log(square);
-
+  
   const size = Math.random() * 200 + 100 + "px";
   square.style.height = size;
   square.style.width = size;
@@ -17,14 +32,18 @@ const squareMaker = () => {
   const plusMinus = Math.random() > 0.5 ? 1 : -1;
   square.style.setProperty("--left", Math.random() * 100 * plusMinus + "%");
 
+  
+
   square.addEventListener("click", () => {
     counter--;
     counterDisplay.textContent = counter;
     square.remove();
+    if (square.remove) buzz(square.remove);
   });
   setTimeout(() => {
     square.remove();
   }, 6000);
+
 };
 
 const bubbleMaker = () => {
@@ -46,6 +65,7 @@ const bubbleMaker = () => {
     counter++;
     counterDisplay.textContent = counter;
     bubble.remove();
+    if (bubble.remove) ring(bubble.remove);
   });
 
   setTimeout(() => {
@@ -55,4 +75,4 @@ const bubbleMaker = () => {
 
 
 setInterval(bubbleMaker, 1000);
-setInterval(squareMaker, 1000);
+setInterval(squareMaker, 500);
