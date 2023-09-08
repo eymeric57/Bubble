@@ -1,10 +1,11 @@
 const lvlPage = document.querySelector("h5");
 
+const loser = document.querySelector("h6");
 
 const counterDisplay = document.querySelector("h3");
 let counter = 0;
 
-let temps = 5;
+let temps = 50;
 const timerElement = document.getElementById("timer");
 const square = document.createElement("span2");
 const bubble = document.createElement("span1");
@@ -13,11 +14,9 @@ function diminuerTemps() {
   timerElement.innerText = temps;
   temps--;
   temps = temps <= 0 ? 0 : temps - 0;
- 
 }
 
 setInterval(diminuerTemps, 1000);
-
 
 const buzz = () => {
   const audio = new Audio();
@@ -55,13 +54,12 @@ const squareMaker = () => {
     square.remove();
   }, 6000);
 
-  if (temps == "0") {
-    lvlPage.style.opacity = "2";
-    square.style.visibility ="hidden"
-    
+  if (temps == "00") {
+    loser.style.visibility = "visible";
+    square.style.visibility = "hidden";
   }
 
-  if (counter == "20") {
+  if (counter == "2") {
     lvlPage.style.opacity = "2";
     square.style.visibility = "hidden";
   }
@@ -90,13 +88,12 @@ const bubbleMaker = () => {
     if (bubble.remove) ring(bubble.remove);
   });
 
-  if (temps == "0") {
-    lvlPage.style.opacity = "2";
-    bubble.style.visibility ="hidden"
-    
+  if (temps == "00") {
+    loser.style.visibility = "visible";
+    bubble.style.visibility = "hidden";
   }
 
-  if (counter == "20") {
+  if (counter == "2") {
     lvlPage.style.opacity = "2";
     bubble.style.visibility = "hidden";
   }
@@ -108,6 +105,3 @@ const bubbleMaker = () => {
 
 setInterval(bubbleMaker, 1000);
 setInterval(squareMaker, 500);
-
-
-

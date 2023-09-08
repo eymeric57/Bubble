@@ -4,6 +4,21 @@ const lvlPage = document.querySelector("h5");
 const counterDisplay = document.querySelector("h3");
 let counter = 0;
 
+let temps = 50;
+const timerElement = document.getElementById("timer");
+const square = document.createElement("span2");
+const bubble = document.createElement("span1");
+
+function diminuerTemps() {
+  timerElement.innerText = temps;
+  temps--;
+  temps = temps <= 0 ? 0 : temps - 0;
+ 
+}
+
+setInterval(diminuerTemps, 1000);
+
+
 const buzz = () => {
   const audio = new Audio();
   audio.src = "../asset/buzz.mp3";
@@ -40,6 +55,13 @@ const squareMaker = () => {
   setTimeout(() => {
     square.remove();
   }, 6000);
+
+  if (temps == "00") {
+    loser.style.opacity = "2";
+    square.style.visibility ="hidden"
+    
+  }
+
   if (counter == "2") {
     lvlPage.style.opacity = "2";
     square.style.visibility = "hidden"
@@ -69,7 +91,13 @@ const bubbleMaker = () => {
     if (bubble.remove) ring(bubble.remove);
   });
 
-  if (counter == "20") {
+  if (temps == "00") {
+    loser.style.opacity = "2";
+    bubble.style.visibility ="hidden"
+    
+  }
+
+  if (counter == "2") {
     lvlPage.style.opacity = "2";
     bubble.style.visibility = "hidden"
   }
