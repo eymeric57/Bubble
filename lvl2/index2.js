@@ -6,12 +6,12 @@ let counter = 0;
 
 const buzz = () => {
   const audio = new Audio();
-  audio.src = "./buzz.mp3";
+  audio.src = "../asset/buzz.mp3";
   audio.play();
 };
 const ring = () => {
   const audio = new Audio();
-  audio.src = "./Enter.mp3";
+  audio.src = "../asset/Enter.mp3";
   audio.play();
 };
 
@@ -40,6 +40,11 @@ const squareMaker = () => {
   setTimeout(() => {
     square.remove();
   }, 6000);
+
+  if (counter == "2") {
+    lvlPage.style.opacity = "2";
+    square.style.visibility = "hidden"
+  }
 };
 
 const bubbleMaker = () => {
@@ -67,6 +72,8 @@ const bubbleMaker = () => {
 
   if (counter == "2") {
     lvlPage.style.opacity = "2";
+    bubble.style.visibility ="hidden"
+    square.style.display = "none"
   }
 
 
@@ -76,4 +83,4 @@ const bubbleMaker = () => {
 };
 
 setInterval(bubbleMaker, 1000);
-setInterval(squareMaker, 500);
+setInterval(squareMaker, 200);

@@ -11,7 +11,7 @@ h1 {
 }
 
 .container-instruction {
-    background: url(./bulle.jpg);
+    background: url(../asset/bulle.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 80px;
@@ -46,4 +46,10 @@ p {
     color: aliceblue;
     text-decoration: none;
     border-radius: 10px;
+    transition: 0.8s;
 }
+.button:hover{
+    background: rgb(77, 92, 230);
+    font-size: 2.5rem;
+}
+
