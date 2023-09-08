@@ -69,7 +69,7 @@ const bubbleMaker = () => {
     if (bubble.remove) ring(bubble.remove);
   });
 
-  if (counter == "2") {
+  if (counter == "20") {
     lvlPage.style.opacity = "2";
     bubble.style.visibility = "hidden"
   }

@@ -4,6 +4,28 @@ body {
     cursor: crosshair;
     user-select: none;
 }
+h2{
+    text-align: center;
+    padding: 10px;
+    border: solid black 2px;
+    width: 100px;
+    margin: 0 auto;
+    border-radius: 20px;
+    background:#eea2a2;
+    z-index: 1;
+    
+}
+#retry{
+    font-size: 2rem;
+    background:#eea2a2;
+    color: white;
+    text-decoration: none;
+    z-index: 2;
+    padding: 5px 10px;
+    border-radius: 20px;
+
+}
+
 
 .bubble {
     position: absolute;

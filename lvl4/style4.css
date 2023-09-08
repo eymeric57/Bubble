@@ -11,7 +11,7 @@ body {overflow: hidden;
         margin: 0 auto;
         border-radius: 20px;
         background:#eea2a2;
-        z-index: 1;
+        z-index: 2;
         
     }
     #retry{
@@ -34,6 +34,8 @@ body {overflow: hidden;
         animation: anim 6s forwards;
         filter: hue-rotate(0deg);
         z-index: 0;
+        
+        
     }
     .tgl{
         position: absolute;
@@ -42,7 +44,9 @@ body {overflow: hidden;
         opacity: 0;
         animation: animat 6s forwards;
         filter: hue-rotate(0deg);
-        z-index: 1;
+        z-index: 0;
+      
+        
     }
     
     .square {
@@ -53,7 +57,9 @@ body {overflow: hidden;
         opacity: 0;
         animation: anima 8s forwards;
         filter: hue-rotate(0deg);
-        z-index: 1;
+        z-index: 0;
+        overflow: hidden;
+        
     
     
     }
@@ -121,7 +127,7 @@ body {overflow: hidden;
     
     }
     
-    a{
+    #LVL{
         font-size: 2rem;
         border: solid black 2px;
         background:#eea2a2;

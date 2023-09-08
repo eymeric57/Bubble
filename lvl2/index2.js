@@ -41,7 +41,7 @@ const squareMaker = () => {
     square.remove();
   }, 6000);
 
-  if (counter == "2") {
+  if (counter == "20") {
     lvlPage.style.opacity = "2";
     square.style.visibility = "hidden"
   }

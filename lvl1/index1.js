@@ -4,6 +4,21 @@ const lvlPage = document.querySelector("h5");
 const counterDisplay = document.querySelector("h3");
 let counter = 0;
 
+let temps = 5;
+const timerElement = document.getElementById("timer");
+const square = document.createElement("span2");
+const bubble = document.createElement("span1");
+
+function diminuerTemps() {
+  timerElement.innerText = temps;
+  temps--;
+  temps = temps <= 0 ? 0 : temps - 0;
+ 
+}
+
+setInterval(diminuerTemps, 1000);
+
+
 const buzz = () => {
   const audio = new Audio();
   audio.src = "../asset/buzz.mp3";
@@ -35,15 +50,20 @@ const squareMaker = () => {
     counterDisplay.textContent = counter;
     square.remove();
     if (square.remove) buzz(square.remove);
-   
   });
   setTimeout(() => {
     square.remove();
   }, 6000);
 
-  if (counter == "2") {
+  if (temps == "0") {
     lvlPage.style.opacity = "2";
-    square.style.visibility = "hidden"
+    square.style.visibility ="hidden"
+    
+  }
+
+  if (counter == "20") {
+    lvlPage.style.opacity = "2";
+    square.style.visibility = "hidden";
   }
 };
 
@@ -70,11 +90,16 @@ const bubbleMaker = () => {
     if (bubble.remove) ring(bubble.remove);
   });
 
-  if (counter == "2") {
+  if (temps == "0") {
     lvlPage.style.opacity = "2";
-    bubble.style.visibility = "hidden"
+    bubble.style.visibility ="hidden"
+    
   }
 
+  if (counter == "20") {
+    lvlPage.style.opacity = "2";
+    bubble.style.visibility = "hidden";
+  }
 
   setTimeout(() => {
     bubble.remove();
@@ -83,3 +108,6 @@ const bubbleMaker = () => {
 
 setInterval(bubbleMaker, 1000);
 setInterval(squareMaker, 500);
+
+
+

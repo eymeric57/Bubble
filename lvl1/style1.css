@@ -5,6 +5,13 @@ min-height: 100vh;
 cursor: crosshair;
 user-select: none;
 }
+#timer{
+    top: 10px;
+    right: 50px;
+    position: absolute;
+    font-size: 5rem;
+
+}
 h2{
     text-align: center;
     padding: 10px;
