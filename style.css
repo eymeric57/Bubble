@@ -1,3 +1,5 @@
+
+
 body {overflow: hidden;
 min-height: 100vh;
 cursor: crosshair;
@@ -59,4 +61,30 @@ h4{
     to {
         opacity: 0;
     }
+}
+
+h5{
+    font-family: rubik bubbles;
+    font-weight: 100;
+    font-size: 5rem;
+    text-align: center;
+    border: solid 5px;
+    width: 30%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 50px;
+    background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);;
+    opacity: 0;
+    transition: 0.3s;
+    color: white;
+
+}
+
+a{
+    font-size: 2rem;
+    border: solid black 2px;
+    background:#eea2a2;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
 }
