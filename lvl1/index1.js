@@ -5,10 +5,12 @@ const loser = document.querySelector("h6");
 const counterDisplay = document.querySelector("h3");
 let counter = 0;
 
-let temps = 5;
+let temps = 30;
 const timerElement = document.getElementById("timer");
 const square = document.createElement("span2");
 const bubble = document.createElement("span1");
+
+
 
 function diminuerTemps() {
   timerElement.innerText = temps;
@@ -62,6 +64,9 @@ const squareMaker = () => {
   if (counter == "2") {
     lvlPage.style.opacity = "2";
     square.style.visibility = "hidden";
+    loser.style.visibility = "hidden";
+    
+
   }
 };
 
@@ -96,6 +101,7 @@ const bubbleMaker = () => {
   if (counter == "2") {
     lvlPage.style.opacity = "2";
     bubble.style.visibility = "hidden";
+    loser.style.visibility = "hidden";
   }
 
   setTimeout(() => {
