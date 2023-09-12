@@ -1,9 +1,11 @@
 const lvlPage = document.querySelector("h5");
 
+const loser = document.querySelector("h6");
+
 const counterDisplay = document.querySelector("h3");
 let counter = 0;
 
-let temps = 50;
+let temps = 5;
 const timerElement = document.getElementById("timer");
 const square = document.createElement("span2");
 const bubble = document.createElement("span1");
@@ -52,7 +54,7 @@ const squareMaker = () => {
   });
 
   if (temps == "00") {
-    loser.style.opacity = "2";
+    loser.style.visibility = "visible";
     square.style.visibility ="hidden"
     
   }
@@ -90,7 +92,7 @@ const bubbleMaker = () => {
   });
 
   if (temps == "00") {
-    loser.style.opacity = "2";
+    loser.style.visibility = "visible";
     bubble.style.visibility ="hidden"
     
   }

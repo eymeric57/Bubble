@@ -1,6 +1,10 @@
 const lvlPage = document.querySelector("h5");
 
 
+const loser = document.querySelector("h6");
+
+
+
 const counterDisplay = document.querySelector("h3");
 let counter = 0;
 
@@ -56,8 +60,8 @@ const squareMaker = () => {
     square.remove();
   }, 6000);
 
-  if (temps == "00") {
-    loser.style.opacity = "2";
+  if (temps == "0") {
+    loser.style.visibility = "visible";
     square.style.visibility ="hidden"
     
   }
@@ -91,8 +95,8 @@ const bubbleMaker = () => {
     if (bubble.remove) ring(bubble.remove);
   });
 
-  if (temps == "00") {
-    loser.style.opacity = "2";
+  if (temps == "0") {
+    loser.style.visibility = "visible";
     bubble.style.visibility ="hidden"
     
   }
