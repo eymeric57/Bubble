@@ -1,9 +1,6 @@
 const lvlPage = document.querySelector("h5");
 
-
 const loser = document.querySelector("h6");
-
-
 
 const counterDisplay = document.querySelector("h3");
 let counter = 0;
@@ -17,11 +14,9 @@ function diminuerTemps() {
   timerElement.innerText = temps;
   temps--;
   temps = temps <= 0 ? 0 : temps - 0;
- 
 }
 
 setInterval(diminuerTemps, 1000);
-
 
 const buzz = () => {
   const audio = new Audio();
@@ -54,21 +49,21 @@ const squareMaker = () => {
     counterDisplay.textContent = counter;
     square.remove();
     if (square.remove) buzz(square.remove);
-   
   });
+
   setTimeout(() => {
     square.remove();
   }, 6000);
 
   if (temps == "0") {
     loser.style.visibility = "visible";
-    square.style.visibility ="hidden"
-    
+    square.style.visibility = "hidden";
   }
 
   if (counter == "2") {
+    loser.style.visibility = "hidden";
     lvlPage.style.opacity = "2";
-    square.style.visibility = "hidden"
+    square.style.visibility = "hidden";
   }
 };
 
@@ -97,15 +92,14 @@ const bubbleMaker = () => {
 
   if (temps == "0") {
     loser.style.visibility = "visible";
-    bubble.style.visibility ="hidden"
-    
+    bubble.style.visibility = "hidden";
   }
 
   if (counter == "2") {
+    loser.style.visibility = "hidden";
     lvlPage.style.opacity = "2";
-    bubble.style.visibility = "hidden"
+    bubble.style.visibility = "hidden";
   }
-
 
   setTimeout(() => {
     bubble.remove();

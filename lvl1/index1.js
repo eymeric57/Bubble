@@ -5,7 +5,7 @@ const loser = document.querySelector("h6");
 const counterDisplay = document.querySelector("h3");
 let counter = 0;
 
-let temps = 30;
+let temps = 40;
 const timerElement = document.getElementById("timer");
 const square = document.createElement("span2");
 const bubble = document.createElement("span1");
@@ -61,10 +61,12 @@ const squareMaker = () => {
     square.style.visibility = "hidden";
   }
 
-  if (counter == "2") {
+  if (counter == "20") {
     lvlPage.style.opacity = "2";
     square.style.visibility = "hidden";
     loser.style.visibility = "hidden";
+    
+    
     
 
   }
@@ -98,7 +100,7 @@ const bubbleMaker = () => {
     bubble.style.visibility = "hidden";
   }
 
-  if (counter == "2") {
+  if (counter == "20") {
     lvlPage.style.opacity = "2";
     bubble.style.visibility = "hidden";
     loser.style.visibility = "hidden";
