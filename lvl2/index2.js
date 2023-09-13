@@ -59,7 +59,7 @@ const squareMaker = () => {
     square.style.visibility = "hidden";
   }
 
-  if (counter == "2") {
+  if (counter == "20") {
     lvlPage.style.opacity = "2";
     square.style.visibility = "hidden";
     loser.style.visibility = "hidden";
@@ -95,7 +95,7 @@ const bubbleMaker = () => {
     bubble.style.visibility = "hidden";
   }
 
-  if (counter == "2") {
+  if (counter == "20") {
     lvlPage.style.opacity = "2";
     bubble.style.visibility = "hidden";
     loser.style.visibility = "hidden";

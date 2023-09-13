@@ -54,7 +54,8 @@ h2 {
 
 }
 h2:hover{
-    background: red;
+    background: white ;
+    color:black;
     scale: 1.2;
 }
 

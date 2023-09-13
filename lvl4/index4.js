@@ -9,16 +9,15 @@ let temps = 50;
 const timerElement = document.getElementById("timer");
 const square = document.createElement("span2");
 const bubble = document.createElement("span1");
+const tgl = document.createElement("span3");
 
 function diminuerTemps() {
   timerElement.innerText = temps;
   temps--;
   temps = temps <= 0 ? 0 : temps - 0;
- 
 }
 
 setInterval(diminuerTemps, 1000);
-
 
 const buzz = () => {
   const audio = new Audio();
@@ -55,14 +54,13 @@ const squareMaker = () => {
 
   if (temps == "0") {
     loser.style.visibility = "visible";
-    square.style.visibility ="hidden"
-    
+    square.style.visibility = "hidden";
   }
 
   if (counter == "20") {
     loser.style.visibility = "hidden";
     lvlPage.style.opacity = "2";
-    square.style.visibility = "hidden"
+    square.style.visibility = "hidden";
   }
   setTimeout(() => {
     square.remove();
@@ -92,16 +90,15 @@ const bubbleMaker = () => {
     if (bubble.remove) ring(bubble.remove);
   });
 
-  if (temps == "false") {
+  if (temps == "0") {
     loser.style.visibility = "visible";
-    bubble.style.visibility ="hidden"
-    
+    bubble.style.visibility = "hidden";
   }
 
   if (counter == "20") {
     loser.style.visibility = "hidden";
     lvlPage.style.opacity = "2";
-    bubble.style.visibility = "hidden"
+    bubble.style.visibility = "hidden";
   }
 
   setTimeout(() => {
@@ -134,13 +131,12 @@ const tglMaker = () => {
 
   if (temps == "0") {
     loser.style.opacity = "2";
-    tgl.style.visibility ="hidden"
-    
+    tgl.style.visibility = "hidden";
   }
 
   if (counter == "20") {
     lvlPage.style.opacity = "2";
-    tgl.style.visibility = "hidden"
+    tgl.style.visibility = "hidden";
   }
 
   setTimeout(() => {
@@ -149,5 +145,5 @@ const tglMaker = () => {
 };
 
 setInterval(bubbleMaker, 1000);
-setInterval(squareMaker, 100);
-setInterval(tglMaker, 400);
+setInterval(squareMaker, 200);
+setInterval(tglMaker, 200);
